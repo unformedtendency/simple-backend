@@ -1,7 +1,17 @@
-import { Controller, Get, Post, Delete, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Delete,
+  Param,
+  Body,
+  UseGuards,
+} from '@nestjs/common';
 import { StudentsService } from './students.service';
+import { FirebaseAuthGuard } from '../guards/firebase-auth.guard';
 
 @Controller('students')
+@UseGuards(FirebaseAuthGuard)
 export class StudentsController {
   constructor(private readonly studentService: StudentsService) { }
 
