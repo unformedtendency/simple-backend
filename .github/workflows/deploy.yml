@@ -10,7 +10,7 @@ env:
   REGION: asia-south1
   # Update these two lines to match your actual names:
   SERVICE_NAME: nestjs-service
-  ARTIFACT_REPO: nestjs-service
+  ARTIFACT_REPO:  nestjs-repo
 
 jobs:
   deploy:
